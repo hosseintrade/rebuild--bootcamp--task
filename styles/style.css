@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* root variable */
+:root {
+  --color-primary: #219f95;
+  --color-secondary-light: #afcedd;
+  --color-secondary-dark: #234894;
+  --color-body: #696969;
+  --color-black: #1e1e1e;
+  --color-white: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: var(--color-body);
+  font-size: 1.6rem;
+}
+
+/* typegraphy */
+
+h1,
+h2,
+h3 {
+  color: var(--color-black);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* buttons and badges */
+
+.badge {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+  padding: 1rem 1.6rem;
+  border-radius: 6px;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 14px;
+  padding: 2.2rem 1.5rem;
+}
+
+/* header */
+
+.request--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.request--header__title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--color-secondary-dark);
+}
+.date {
+  font-size: 1.2rem;
+}
+/* body */
+
+.request--body {
+  margin-top: 2rem;
+}
+
+.request--body__id {
+  font-size: 1rem;
+}
+
+/* footer */
+
+.request--footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.request--footer__avatar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.avatar--img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* responsive */
+
+.container h1 {
+  margin: 10rem 0rem;
+}
+
+.container--requests {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .container--requests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container--requests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+}
